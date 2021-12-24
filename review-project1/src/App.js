@@ -1,12 +1,10 @@
 import "./App.css";
-import User from "./components/User";
-import Card from "./components/Card";
+import Page from "./components/Page";
 
 function App() {
   return (
     <>
-      <User />
-      <Card />
+      <Page />
     </>
   );
 }
