@@ -29,10 +29,4 @@ export const ErrorBody = styled.div`
 
 export const ErrorMessage = styled.p``;
 
-export const ErrorButton = styled.button`
-  outline: none;
-  border: none;
-  background-color: purple;
-  color: #fff;
-  padding: 5px 15px;
-`;
+export const ErrorBtnWrap = styled.div``;

@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "../Button";
 import {
   ErrorContainer,
   ErrorHeader,
   ErrorTitle,
   ErrorBody,
   ErrorMessage,
-  ErrorButton,
+  ErrorBtnWrap,
 } from "./ErrorModalElements";
 
 const ErrorModal = () => {
@@ -16,7 +17,9 @@ const ErrorModal = () => {
       </ErrorHeader>
       <ErrorBody>
         <ErrorMessage></ErrorMessage>
-        <ErrorButton>Okay</ErrorButton>
+        <ErrorBtnWrap>
+          <Button lebel="okay" />
+        </ErrorBtnWrap>
       </ErrorBody>
     </ErrorContainer>
   );

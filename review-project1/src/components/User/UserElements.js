@@ -27,13 +27,6 @@ export const UserInput = styled.input`
   border: 1px solid lightgray;
 `;
 
-export const Button = styled.button`
+export const ButtonWrap = styled.div`
   align-self: flex-start;
-  text-transform: capitalize;
-  outline: none;
-  border: none;
-  color: #fff;
-  background-color: purple;
-  padding: 5px 15px;
-  font-size: 1rem;
 `;

@@ -1,11 +1,12 @@
 import React from "react";
+import Button from "../Button";
 import {
   UserContainer,
   UserWrap,
   UserForm,
   Label,
   UserInput,
-  Button,
+  ButtonWrap,
 } from "./UserElements";
 
 const User = () => {
@@ -17,7 +18,9 @@ const User = () => {
           <UserInput />
           <Label>age (years)</Label>
           <UserInput />
-          <Button>add user</Button>
+          <ButtonWrap>
+            <Button label="add user" />
+          </ButtonWrap>
         </UserForm>
       </UserWrap>
     </UserContainer>
