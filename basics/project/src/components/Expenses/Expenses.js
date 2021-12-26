@@ -3,6 +3,16 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
 const Expenses = (props) => {
+  const createItem = (data) => {
+    return (
+      <ExpenseItem
+        key={data.items.id}
+        title={data.items.title}
+        amount={data.items.amount}
+        date={data.items.date}
+      />
+    );
+  };
   return (
     <Card className="expenses">
       <ExpenseItem
@@ -25,6 +35,7 @@ const Expenses = (props) => {
         amount={props.items[3].amount}
         date={props.items[3].date}
       />
+      {/* {props.items.map(createItem)} */}
     </Card>
   );
 };
