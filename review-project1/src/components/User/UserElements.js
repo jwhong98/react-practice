@@ -9,24 +9,3 @@ export const UserContainer = styled.div`
 `;
 
 export const UserWrap = styled.div``;
-
-export const UserForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-`;
-
-export const Label = styled.p`
-  font-weight: bold;
-  font-size: 1rem;
-  text-transform: capitalize;
-`;
-
-export const UserInput = styled.input`
-  border: 1px solid lightgray;
-`;
-
-export const ButtonWrap = styled.div`
-  align-self: flex-start;
-`;

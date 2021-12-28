@@ -8,4 +8,5 @@ export const Btn = styled.button`
   background-color: purple;
   padding: 5px 15px;
   font-size: 1rem;
+  cursor: pointer;
 `;

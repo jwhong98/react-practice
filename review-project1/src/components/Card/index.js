@@ -1,15 +1,12 @@
 import React from "react";
-import { CardContainer, CardWrap, CardName, CardAge } from "./CardElements";
+import CardInfo from "../CardInfo";
+import { CardContainer } from "./CardElements";
 
-const Card = () => {
-  return (
-    <CardContainer>
-      <CardWrap>
-        <CardName>max</CardName>
-        <CardAge>(31 years old)</CardAge>
-      </CardWrap>
-    </CardContainer>
-  );
+const Card = (props) => {
+  const createCardInfo = (data) => {
+    return <CardInfo key={data.id} name={data.name} age={data.age} />;
+  };
+  return <CardContainer>{props.users.map(createCardInfo)}</CardContainer>;
 };
 
 export default Card;
