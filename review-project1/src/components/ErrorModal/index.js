@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../Button";
 import {
   ErrorContainer,
+  ErrorWrap,
   ErrorHeader,
   ErrorTitle,
   ErrorBody,
@@ -9,18 +10,20 @@ import {
   ErrorBtnWrap,
 } from "./ErrorModalElements";
 
-const ErrorModal = () => {
+const ErrorModal = ({isOpen, toggle}) => {
   return (
-    <ErrorContainer>
-      <ErrorHeader>
-        <ErrorTitle>invalid input</ErrorTitle>
-      </ErrorHeader>
-      <ErrorBody>
-        <ErrorMessage></ErrorMessage>
-        <ErrorBtnWrap>
-          <Button lebel="okay" />
-        </ErrorBtnWrap>
-      </ErrorBody>
+    <ErrorContainer isOpen={isOpen} onClick={toggle}>
+      <ErrorWrap>
+        <ErrorHeader>
+          <ErrorTitle>invalid input</ErrorTitle>
+        </ErrorHeader>
+        <ErrorBody>
+          <ErrorMessage></ErrorMessage>
+          <ErrorBtnWrap>
+            <Button label="okay" />
+          </ErrorBtnWrap>
+        </ErrorBody>
+      </ErrorWrap>
     </ErrorContainer>
   );
 };

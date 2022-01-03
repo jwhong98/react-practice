@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
 export const ErrorContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+`;
+
+export const ErrorWrap = styled.div`
   width: 800px;
 `;
 
@@ -25,6 +34,7 @@ export const ErrorBody = styled.div`
   padding: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  background: #fff;
 `;
 
 export const ErrorMessage = styled.p``;

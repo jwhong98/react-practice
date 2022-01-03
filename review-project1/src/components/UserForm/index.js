@@ -6,6 +6,7 @@ import {
   ButtonWrap,
 } from "./UserFormElements";
 import Button from "../Button";
+import ErrorModal from "../ErrorModal";
 
 const UserForm = (props) => {
   const [name, setName] = useState("");
@@ -21,13 +22,18 @@ const UserForm = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    const userData = {
-      name: name,
-      age: age,
-    };
-    props.onSaveUser(userData);
-    setName("");
-    setAge("");
+    if (name === "" || age === "") {
+      console.log("error");
+      <ErrorModal />;
+    } else {
+      const userData = {
+        name: name,
+        age: age,
+      };
+      props.onSaveUser(userData);
+      setName("");
+      setAge("");
+    }
   };
   return (
     <UserFormContainer onSubmit={submitHandler}>
